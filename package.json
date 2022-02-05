@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --config webpack.config.js",
-    "dev": "webpack --config webpack.config.dev.js",
-    "build:watch": "webpack --watch --config webpack.config.js"
+    "dev": "node ./scripts/create-env.js && webpack --config webpack.config.dev.js",
+    "build:watch": "webpack --watch --config webpack.config.js",
+    "star": "webpack serve --config webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
